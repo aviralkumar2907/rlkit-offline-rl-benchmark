@@ -40,6 +40,7 @@ class ObsDictRelabelingBuffer(ReplayBuffer):
         if desired_goal_key not in goal_keys:
             goal_keys.append(desired_goal_key)
         self.goal_keys = goal_keys
+        # import ipdb; ipdb.set_trace()
         assert isinstance(env.observation_space, Dict)
         assert 0 <= fraction_goals_rollout_goals
         assert 0 <= fraction_goals_env_goals

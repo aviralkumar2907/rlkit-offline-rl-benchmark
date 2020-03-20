@@ -92,6 +92,7 @@ class SACTrainer(TorchTrainer):
         """
         Policy and Alpha Loss
         """
+        # import ipdb; ipdb.set_trace()
         new_obs_actions, policy_mean, policy_log_std, log_pi, *_ = self.policy(
             obs, reparameterize=True, return_log_prob=True,
         )
